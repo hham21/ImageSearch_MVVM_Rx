@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		37684D3724869C3100EEC982 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37684D3624869C3100EEC982 /* MainViewController.swift */; };
+		37684D3924869C4400EEC982 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37684D3824869C4400EEC982 /* SearchViewController.swift */; };
+		37684D3B24869C4F00EEC982 /* FavoriteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37684D3A24869C4F00EEC982 /* FavoriteViewController.swift */; };
 		379318EB24864D1400749580 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 379318EA24864D1400749580 /* AppDelegate.swift */; };
 		379318F424864D1600749580 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 379318F324864D1600749580 /* Assets.xcassets */; };
 		379318F724864D1600749580 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 379318F524864D1600749580 /* LaunchScreen.storyboard */; };
@@ -21,6 +24,9 @@
 
 /* Begin PBXFileReference section */
 		21EE95218E4068CBFE9D6851 /* Pods-ImageSearch_MVVM_Rx.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ImageSearch_MVVM_Rx.debug.xcconfig"; path = "Target Support Files/Pods-ImageSearch_MVVM_Rx/Pods-ImageSearch_MVVM_Rx.debug.xcconfig"; sourceTree = "<group>"; };
+		37684D3624869C3100EEC982 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		37684D3824869C4400EEC982 /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
+		37684D3A24869C4F00EEC982 /* FavoriteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteViewController.swift; sourceTree = "<group>"; };
 		379318E724864D1400749580 /* ImageSearch_MVVM_Rx.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ImageSearch_MVVM_Rx.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		379318EA24864D1400749580 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		379318F324864D1600749580 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -56,6 +62,16 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		37684D3524869C1C00EEC982 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				37684D3624869C3100EEC982 /* MainViewController.swift */,
+				37684D3824869C4400EEC982 /* SearchViewController.swift */,
+				37684D3A24869C4F00EEC982 /* FavoriteViewController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		379318DE24864D1400749580 = {
 			isa = PBXGroup;
 			children = (
@@ -77,10 +93,11 @@
 		379318E924864D1400749580 /* ImageSearch_MVVM_Rx */ = {
 			isa = PBXGroup;
 			children = (
+				379318EA24864D1400749580 /* AppDelegate.swift */,
+				37684D3524869C1C00EEC982 /* View */,
 				3793190B24865B3200749580 /* Util */,
 				379319062486582800749580 /* Network */,
 				379318FE248650FC00749580 /* Entity */,
-				379318EA24864D1400749580 /* AppDelegate.swift */,
 				379318F324864D1600749580 /* Assets.xcassets */,
 				379318F524864D1600749580 /* LaunchScreen.storyboard */,
 				379318F824864D1600749580 /* Info.plist */,
@@ -241,10 +258,13 @@
 				3793190D24865B4100749580 /* Constant.swift in Sources */,
 				379319042486525000749580 /* SearchResponse.swift in Sources */,
 				379318EB24864D1400749580 /* AppDelegate.swift in Sources */,
+				37684D3924869C4400EEC982 /* SearchViewController.swift in Sources */,
+				37684D3B24869C4F00EEC982 /* FavoriteViewController.swift in Sources */,
 				379319002486510900749580 /* Image.swift in Sources */,
 				37931902248651D200749580 /* Meta.swift in Sources */,
 				3793190A2486584900749580 /* Router.swift in Sources */,
 				379319082486583F00749580 /* API.swift in Sources */,
+				37684D3724869C3100EEC982 /* MainViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
