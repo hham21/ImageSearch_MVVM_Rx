@@ -3,13 +3,16 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		379318EB24864D1400749580 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 379318EA24864D1400749580 /* AppDelegate.swift */; };
 		379318F424864D1600749580 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 379318F324864D1600749580 /* Assets.xcassets */; };
 		379318F724864D1600749580 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 379318F524864D1600749580 /* LaunchScreen.storyboard */; };
+		379319002486510900749580 /* Image.swift in Sources */ = {isa = PBXBuildFile; fileRef = 379318FF2486510900749580 /* Image.swift */; };
+		37931902248651D200749580 /* Meta.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37931901248651D200749580 /* Meta.swift */; };
+		379319042486525000749580 /* SearchResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 379319032486525000749580 /* SearchResponse.swift */; };
 		6A6685FB537DA1EE689BA0C9 /* Pods_ImageSearch_MVVM_Rx.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 62E15F4945E4939782238D68 /* Pods_ImageSearch_MVVM_Rx.framework */; };
 /* End PBXBuildFile section */
 
@@ -20,6 +23,9 @@
 		379318F324864D1600749580 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		379318F624864D1600749580 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		379318F824864D1600749580 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		379318FF2486510900749580 /* Image.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Image.swift; sourceTree = "<group>"; };
+		37931901248651D200749580 /* Meta.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Meta.swift; sourceTree = "<group>"; };
+		379319032486525000749580 /* SearchResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchResponse.swift; sourceTree = "<group>"; };
 		62E15F4945E4939782238D68 /* Pods_ImageSearch_MVVM_Rx.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ImageSearch_MVVM_Rx.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DEA44CB7E60B1B518CD52887 /* Pods-ImageSearch_MVVM_Rx.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ImageSearch_MVVM_Rx.release.xcconfig"; path = "Target Support Files/Pods-ImageSearch_MVVM_Rx/Pods-ImageSearch_MVVM_Rx.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -65,6 +71,7 @@
 		379318E924864D1400749580 /* ImageSearch_MVVM_Rx */ = {
 			isa = PBXGroup;
 			children = (
+				379318FE248650FC00749580 /* Entity */,
 				379318EA24864D1400749580 /* AppDelegate.swift */,
 				379318F324864D1600749580 /* Assets.xcassets */,
 				379318F524864D1600749580 /* LaunchScreen.storyboard */,
@@ -73,13 +80,22 @@
 			path = ImageSearch_MVVM_Rx;
 			sourceTree = "<group>";
 		};
+		379318FE248650FC00749580 /* Entity */ = {
+			isa = PBXGroup;
+			children = (
+				379318FF2486510900749580 /* Image.swift */,
+				37931901248651D200749580 /* Meta.swift */,
+				379319032486525000749580 /* SearchResponse.swift */,
+			);
+			path = Entity;
+			sourceTree = "<group>";
+		};
 		535332AEE029276C7F4D1C61 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
 				21EE95218E4068CBFE9D6851 /* Pods-ImageSearch_MVVM_Rx.debug.xcconfig */,
 				DEA44CB7E60B1B518CD52887 /* Pods-ImageSearch_MVVM_Rx.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -197,7 +213,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				379319042486525000749580 /* SearchResponse.swift in Sources */,
 				379318EB24864D1400749580 /* AppDelegate.swift in Sources */,
+				379319002486510900749580 /* Image.swift in Sources */,
+				37931902248651D200749580 /* Meta.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
