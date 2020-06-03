@@ -47,6 +47,7 @@ final class MainViewController: UITabBarController {
         favoriteViewController.do {
             $0.loadViewIfNeeded()
             $0.tabBarItem = favoriteTabBarItem
+            $0.bind(viewModel: FavoriteViewModel())
         }
     }
 }

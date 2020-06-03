@@ -110,7 +110,6 @@ final class SearchViewController: UIViewController {
 }
 
 // MARK: - UICollectionViewDelegateFlowLayout
-
 extension SearchViewController: UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         let spacing: CGFloat = Constant.minSpacing * Constant.numberOfSpace

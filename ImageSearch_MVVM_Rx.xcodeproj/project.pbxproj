@@ -10,6 +10,7 @@
 		3768028524873C040034E07F /* ImageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3768028424873C040034E07F /* ImageCell.swift */; };
 		376802882487485D0034E07F /* LocalStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 376802872487485D0034E07F /* LocalStorage.swift */; };
 		3768028A248749900034E07F /* LocalImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37680289248749900034E07F /* LocalImage.swift */; };
+		376802902487A0430034E07F /* FavoriteModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3768028F2487A0430034E07F /* FavoriteModel.swift */; };
 		37684D3724869C3100EEC982 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37684D3624869C3100EEC982 /* MainViewController.swift */; };
 		37684D3924869C4400EEC982 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37684D3824869C4400EEC982 /* SearchViewController.swift */; };
 		37684D3B24869C4F00EEC982 /* FavoriteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37684D3A24869C4F00EEC982 /* FavoriteViewController.swift */; };
@@ -34,6 +35,7 @@
 		3768028424873C040034E07F /* ImageCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCell.swift; sourceTree = "<group>"; };
 		376802872487485D0034E07F /* LocalStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalStorage.swift; sourceTree = "<group>"; };
 		37680289248749900034E07F /* LocalImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalImage.swift; sourceTree = "<group>"; };
+		3768028F2487A0430034E07F /* FavoriteModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteModel.swift; sourceTree = "<group>"; };
 		37684D3624869C3100EEC982 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		37684D3824869C4400EEC982 /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
 		37684D3A24869C4F00EEC982 /* FavoriteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteViewController.swift; sourceTree = "<group>"; };
@@ -108,6 +110,7 @@
 			isa = PBXGroup;
 			children = (
 				37684D442486ABE100EEC982 /* SearchModel.swift */,
+				3768028F2487A0430034E07F /* FavoriteModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -315,6 +318,7 @@
 				37684D452486ABE100EEC982 /* SearchModel.swift in Sources */,
 				379319082486583F00749580 /* API.swift in Sources */,
 				376802882487485D0034E07F /* LocalStorage.swift in Sources */,
+				376802902487A0430034E07F /* FavoriteModel.swift in Sources */,
 				37684D3724869C3100EEC982 /* MainViewController.swift in Sources */,
 				3768028524873C040034E07F /* ImageCell.swift in Sources */,
 			);
