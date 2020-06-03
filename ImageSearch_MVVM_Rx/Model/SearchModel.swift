@@ -6,17 +6,40 @@
 //  Copyright © 2020 Ham-Dev. All rights reserved.
 //
 
-import Foundation
+import RxSwift
+import RxCocoa
 
 struct SearchModel {
-    private let api: APIProtocol
+    private var disposeBag: DisposeBag = .init()
     
-    init(api: APIProtocol = API()) {
+    private let api: APIProtocol
+    private let storage: LocalStorage
+    private let localSaved: BehaviorRelay<[String: LocalImage]> = .init(value: [:])
+    
+    init(api: APIProtocol = API(), storage: LocalStorage = LocalStorage()) {
         self.api = api
+        self.storage = storage
+        
+        storage.favorites()
+            .map { $0.reduce(into: [:], { $0[$1.imageURL] = $1 }) }
+            .bind(to: localSaved)
+            .disposed(by: disposeBag)
     }
     
     func getImages(from query: Query) -> SearchResult {
         return api.getImages(query: query)
+    }
+    
+    func toggle(image: ImageCellData) -> Completable {
+        if let localImage = localSaved.value[image.identity], image.favorite {
+            storage.delete(image: localImage)
+        } else {
+            let localImage = LocalImage()
+            localImage.imageURL = image.identity
+            localImage.favorite = image.favorite
+            storage.add(image: localImage)
+        }
+        return .empty()
     }
     
     func makeCellData(from images: [Image]) -> [ImageCellData] {
@@ -25,6 +48,6 @@ struct SearchModel {
     
     private func toImageCellData(_ image: Image) -> ImageCellData? {
         guard let url = URL(string: image.imageURL) else { return nil }
-        return ImageCellData(url: url, favorite: true)
+        return ImageCellData(url: url, favorite: false)
     }
 }

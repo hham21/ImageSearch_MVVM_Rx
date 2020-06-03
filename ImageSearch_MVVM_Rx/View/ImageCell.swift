@@ -13,8 +13,8 @@ import Kingfisher
 final class ImageCell: UICollectionViewCell {
     static let identifier: String = .init(describing: ImageCell.self)
     
-    let imageView: UIImageView = .init()
-    let favoriteButton: UIButton = .init()
+    private let imageView: UIImageView = .init()
+    private let favoriteButton: UIButton = .init()
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -28,6 +28,7 @@ final class ImageCell: UICollectionViewCell {
     
     private func setAttributes() {
         imageView.do {
+            $0.backgroundColor = .lightGray
             $0.contentMode = .scaleAspectFill
             $0.layer.masksToBounds = true
         }

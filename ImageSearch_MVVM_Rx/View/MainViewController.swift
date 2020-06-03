@@ -41,6 +41,7 @@ final class MainViewController: UITabBarController {
         searchViewController.do {
             $0.loadViewIfNeeded()
             $0.tabBarItem = searchTabBarItem
+            $0.bind(viewModel: SearchViewModel())
         }
         
         favoriteViewController.do {
