@@ -10,8 +10,8 @@ import UIKit
 import Then
 
 final class MainViewController: UITabBarController {
-    private var searchViewController: SearchViewController = SearchViewController()
-    private var favoriteViewController: FavoriteViewController = FavoriteViewController()
+    private var searchViewController: SearchViewController = .init()
+    private var favoriteViewController: FavoriteViewController = .init()
     
     private var searchTabBarItem: UITabBarItem = .init(
         title: "이미지 검색",
