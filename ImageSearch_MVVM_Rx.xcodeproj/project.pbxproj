@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3768028524873C040034E07F /* ImageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3768028424873C040034E07F /* ImageCell.swift */; };
 		37684D3724869C3100EEC982 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37684D3624869C3100EEC982 /* MainViewController.swift */; };
 		37684D3924869C4400EEC982 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37684D3824869C4400EEC982 /* SearchViewController.swift */; };
 		37684D3B24869C4F00EEC982 /* FavoriteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37684D3A24869C4F00EEC982 /* FavoriteViewController.swift */; };
@@ -28,6 +29,7 @@
 
 /* Begin PBXFileReference section */
 		21EE95218E4068CBFE9D6851 /* Pods-ImageSearch_MVVM_Rx.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ImageSearch_MVVM_Rx.debug.xcconfig"; path = "Target Support Files/Pods-ImageSearch_MVVM_Rx/Pods-ImageSearch_MVVM_Rx.debug.xcconfig"; sourceTree = "<group>"; };
+		3768028424873C040034E07F /* ImageCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCell.swift; sourceTree = "<group>"; };
 		37684D3624869C3100EEC982 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		37684D3824869C4400EEC982 /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
 		37684D3A24869C4F00EEC982 /* FavoriteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteViewController.swift; sourceTree = "<group>"; };
@@ -76,6 +78,7 @@
 				37684D3624869C3100EEC982 /* MainViewController.swift */,
 				37684D3824869C4400EEC982 /* SearchViewController.swift */,
 				37684D3A24869C4F00EEC982 /* FavoriteViewController.swift */,
+				3768028424873C040034E07F /* ImageCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -297,6 +300,7 @@
 				37684D452486ABE100EEC982 /* SearchModel.swift in Sources */,
 				379319082486583F00749580 /* API.swift in Sources */,
 				37684D3724869C3100EEC982 /* MainViewController.swift in Sources */,
+				3768028524873C040034E07F /* ImageCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
