@@ -11,18 +11,6 @@ import RxRealm
 import RxSwift
 
 struct LocalStorage {
-    private func operate<T>(_ task: String, action: (Realm) throws -> T) -> T? {
-        do {
-            let realm = try Realm()
-            return try action(realm)
-        } catch {
-            print("Operation \(task) failed: \(error)")
-            return nil
-        }
-    }
-}
-
-extension LocalStorage {
     @discardableResult
     func getImage(from key: String) -> LocalImage? {
         autoreleasepool {

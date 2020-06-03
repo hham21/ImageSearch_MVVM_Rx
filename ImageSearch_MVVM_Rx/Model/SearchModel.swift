@@ -30,6 +30,10 @@ struct SearchModel {
         return api.getImages(query: query)
     }
     
+    func favorites() -> Observable<[LocalImage]> {
+        return storage.favorites()
+    }
+    
     func toggle(image: ImageCellData) -> Completable {
         if let localImage = localSaved.value[image.identity], image.favorite {
             storage.delete(image: localImage)
@@ -48,6 +52,7 @@ struct SearchModel {
     
     private func toImageCellData(_ image: Image) -> ImageCellData? {
         guard let url = URL(string: image.imageURL) else { return nil }
-        return ImageCellData(url: url, favorite: false)
+        let favorite = localSaved.value.keys.contains(image.imageURL)
+        return ImageCellData(url: url, favorite: favorite)
     }
 }
