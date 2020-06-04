@@ -107,7 +107,8 @@ struct SearchViewModel {
         let errorMessage = Observable.merge(searchResult, loadMoreResult)
             .map { result -> String? in
                 guard case .failure(let error) = result else { return nil }
-                return error.localizedDescription
+                print(error)
+                return "이미지를 가져오지 못했습니다."
             }
             .filterNil()
             .asSignal(onErrorSignalWith: .empty())

@@ -1,5 +1,5 @@
 //
-//  BaseViewController.swift
+//  BaseCollectionViewController.swift
 //  ImageSearch_MVVM_Rx
 //
 //  Created by Hyoungsu Ham on 2020/06/04.

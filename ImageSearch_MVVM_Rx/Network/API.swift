@@ -25,7 +25,7 @@ extension APIError: LocalizedError {
         case .urlRequestCreationFailed:
             return "url request creation failed"
         case .searchResponseParsingFailed:
-            return "데이터 로드에 실패했습니다."
+            return "SearchResponse parsing failed"
         }
     }
 }
@@ -45,6 +45,7 @@ struct API: APIProtocol {
         Router
             .imageSearch(query)
             .request()
+            .catchErrorJustReturn(.empty)
             .map { data in
                 do {
                     let response = try JSONDecoder().decode(SearchResponse.self, from: data)
