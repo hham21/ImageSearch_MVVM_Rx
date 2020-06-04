@@ -10,7 +10,6 @@ import UIKit
 import RxSwift
 
 final class FavoriteViewController: BaseCollectionViewController {
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         setAttributes()
