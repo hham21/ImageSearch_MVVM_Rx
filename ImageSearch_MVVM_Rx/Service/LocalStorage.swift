@@ -11,7 +11,6 @@ import RxRealm
 import RxSwift
 
 struct LocalStorage {
-    @discardableResult
     func getImage(from key: String) -> LocalImage? {
         autoreleasepool {
             do {
