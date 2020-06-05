@@ -10,7 +10,7 @@ import RxSwift
 import RxCocoa
 
 struct FavoriteViewModel {
-    var disposeBag: DisposeBag = .init()
+    private var disposeBag: DisposeBag = .init()
     
     // MARK: - Output
     let dataSource: Driver<[ImageSection]>
@@ -18,7 +18,7 @@ struct FavoriteViewModel {
     // MARK: - Input
     let itemSelected: PublishRelay<ImageCellData> = .init()
     
-    init(model: FavoriteModel = FavoriteModel()) {
+    init(model: FavoriteModel = .init()) {
         itemSelected
             .flatMap { model.delete(image: $0) }
             .subscribe()

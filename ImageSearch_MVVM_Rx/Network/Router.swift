@@ -14,14 +14,14 @@ enum Router {
 }
 
 extension Router {
-    var path: String {
+    private var path: String {
         switch self {
         case .imageSearch:
             return "/v2/search/image"
         }
     }
     
-    var queryItem: [URLQueryItem] {
+    private var queryItem: [URLQueryItem] {
         switch self {
         case .imageSearch(let query):
             return [
@@ -31,7 +31,7 @@ extension Router {
         }
     }
     
-    var componets: URLComponents {
+    private var componets: URLComponents {
         var components = URLComponents()
         components.scheme = API.Constant.scheme
         components.host = API.Constant.host
@@ -40,12 +40,12 @@ extension Router {
         return components
     }
     
-    var url: URL? {
+    private var url: URL? {
         return componets.url
     }
     
-    var urlRequest: URLRequest? {
-        guard let url = url else { return nil}
+    private var urlRequest: URLRequest? {
+        guard let url = url else { return nil }
         var request = URLRequest(url: url)
         request.addValue(API.Constant.apikey, forHTTPHeaderField: Constant.authorization)
         return request

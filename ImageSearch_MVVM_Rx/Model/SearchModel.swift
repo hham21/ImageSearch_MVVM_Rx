@@ -16,7 +16,7 @@ struct SearchModel {
     private let storage: LocalStorage
     private let localSaved: BehaviorRelay<[String: LocalImage]> = .init(value: [:])
     
-    init(api: APIProtocol = API(), storage: LocalStorage = LocalStorage()) {
+    init(api: APIProtocol = API(), storage: LocalStorage = .init()) {
         self.api = api
         self.storage = storage
         

@@ -15,7 +15,7 @@ final class FavoriteViewController: BaseCollectionViewController {
         setAttributes()
     }
     
-    func setAttributes() {
+    private func setAttributes() {
         title = "즐겨찾기"
     }
         

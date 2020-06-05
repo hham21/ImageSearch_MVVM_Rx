@@ -19,7 +19,7 @@ final class SearchViewController: BaseCollectionViewController {
         setAttributes()
     }
     
-    func setAttributes() {
+    private func setAttributes() {
         title = "이미지 검색"
         navigationItem.searchController = searchController
         

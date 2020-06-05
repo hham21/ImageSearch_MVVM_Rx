@@ -16,7 +16,7 @@ typealias WillDisplayCell = (cell: UICollectionViewCell, at: IndexPath)
 typealias ImageSection = AnimatableSectionModel<String, ImageCellData>
 
 struct SearchViewModel {
-    private var disposeBag: DisposeBag = DisposeBag()
+    private var disposeBag: DisposeBag = .init()
     
     // MARK: - Output
     let dataSource: Driver<[ImageSection]>
@@ -32,7 +32,7 @@ struct SearchViewModel {
     private var lastQuery: PublishRelay<Query> = .init()
     private var isLastPage: BehaviorRelay<Bool> = .init(value: false)
     
-    init(model: SearchModel = SearchModel()) {
+    init(model: SearchModel = .init()) {
         let newSearch = searchBarText
             .map { Query(text: $0, page: 1)}
         

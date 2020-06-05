@@ -11,7 +11,7 @@ import RxSwift
 struct FavoriteModel {
     private let storage: LocalStorage
     
-    init(storage: LocalStorage = LocalStorage()) {
+    init(storage: LocalStorage = .init()) {
         self.storage = storage
     }
     

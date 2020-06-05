@@ -28,6 +28,7 @@
 		379319082486583F00749580 /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = 379319072486583F00749580 /* API.swift */; };
 		3793190A2486584900749580 /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = 379319092486584900749580 /* Router.swift */; };
 		3793190D24865B4100749580 /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3793190C24865B4100749580 /* Constant.swift */; };
+		37A5BD5D248A3675005EEB76 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 37A5BD5C248A3675005EEB76 /* README.md */; };
 		6A6685FB537DA1EE689BA0C9 /* Pods_ImageSearch_MVVM_Rx.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 62E15F4945E4939782238D68 /* Pods_ImageSearch_MVVM_Rx.framework */; };
 /* End PBXBuildFile section */
 
@@ -56,6 +57,7 @@
 		379319072486583F00749580 /* API.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
 		379319092486584900749580 /* Router.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
 		3793190C24865B4100749580 /* Constant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constant.swift; sourceTree = "<group>"; };
+		37A5BD5C248A3675005EEB76 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		62E15F4945E4939782238D68 /* Pods_ImageSearch_MVVM_Rx.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ImageSearch_MVVM_Rx.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DEA44CB7E60B1B518CD52887 /* Pods-ImageSearch_MVVM_Rx.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ImageSearch_MVVM_Rx.release.xcconfig"; path = "Target Support Files/Pods-ImageSearch_MVVM_Rx/Pods-ImageSearch_MVVM_Rx.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -121,6 +123,7 @@
 		379318DE24864D1400749580 = {
 			isa = PBXGroup;
 			children = (
+				37A5BD5C248A3675005EEB76 /* README.md */,
 				379318E924864D1400749580 /* ImageSearch_MVVM_Rx */,
 				379318E824864D1400749580 /* Products */,
 				535332AEE029276C7F4D1C61 /* Pods */,
@@ -140,13 +143,13 @@
 			isa = PBXGroup;
 			children = (
 				379318EA24864D1400749580 /* AppDelegate.swift */,
-				376802862487483C0034E07F /* Service */,
+				379318FE248650FC00749580 /* Entity */,
 				37684D432486ABA000EEC982 /* Model */,
 				37684D3C2486A8A500EEC982 /* ViewModel */,
 				37684D3524869C1C00EEC982 /* View */,
-				3793190B24865B3200749580 /* Util */,
+				376802862487483C0034E07F /* Service */,
 				379319062486582800749580 /* Network */,
-				379318FE248650FC00749580 /* Entity */,
+				3793190B24865B3200749580 /* Util */,
 				379318F324864D1600749580 /* Assets.xcassets */,
 				379318F524864D1600749580 /* LaunchScreen.storyboard */,
 				379318F824864D1600749580 /* Info.plist */,
@@ -252,6 +255,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				37A5BD5D248A3675005EEB76 /* README.md in Resources */,
 				379318F724864D1600749580 /* LaunchScreen.storyboard in Resources */,
 				379318F424864D1600749580 /* Assets.xcassets in Resources */,
 			);
