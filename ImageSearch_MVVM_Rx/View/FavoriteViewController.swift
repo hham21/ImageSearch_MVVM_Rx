@@ -20,10 +20,6 @@ final class FavoriteViewController: BaseCollectionViewController {
     }
         
     func bind(viewModel: FavoriteViewModel) {
-        collectionView.rx
-            .setDelegate(self)
-            .disposed(by: disposeBag)
-        
         viewModel.dataSource
             .drive(collectionView.rx.items(dataSource: dataSource))
             .disposed(by: disposeBag)

@@ -29,10 +29,6 @@ final class SearchViewController: BaseCollectionViewController {
     }
     
     func bind(viewModel: SearchViewModel) {
-        collectionView.rx
-            .setDelegate(self)
-            .disposed(by: disposeBag)
-        
         viewModel.dataSource
             .drive(collectionView.rx.items(dataSource: dataSource))
             .disposed(by: disposeBag)

@@ -59,15 +59,7 @@ class BaseCollectionViewController: UIViewController {
     }
 }
 
-// MARK: - UICollectionViewDelegateFlowLayout
-
-extension BaseCollectionViewController: UICollectionViewDelegateFlowLayout {
-    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        let spacing: CGFloat = Constant.minSpacing * Constant.numberOfSpace
-        let width: CGFloat = (collectionView.bounds.width - spacing) / Constant.numberOfCells
-        return CGSize(width: width, height: width)
-    }
-}
+// MARK: - BaseCollectionViewLayoutDelegate
 
 extension BaseCollectionViewController: BaseCollectionViewLayoutDelegate {
     func collectionView(_ collectionView: UICollectionView, heightForIndexPath indexPath: IndexPath) -> CGFloat {
