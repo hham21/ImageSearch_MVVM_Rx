@@ -41,6 +41,8 @@ struct SearchModel {
             let localImage = LocalImage()
             localImage.imageURL = image.identity
             localImage.favorite = image.favorite
+            localImage.width = image.width
+            localImage.height = image.height
             storage.add(image: localImage)
         }
         return .empty()
@@ -51,8 +53,8 @@ struct SearchModel {
     }
     
     private func toImageCellData(_ image: Image) -> ImageCellData? {
-        guard let url = URL(string: image.imageURL) else { return nil }
-        let favorite = localSaved.value.keys.contains(image.imageURL)
-        return ImageCellData(url: url, favorite: favorite)
+        guard let url: URL = URL(string: image.imageURL) else { return nil }
+        let favorite: Bool = localSaved.value.keys.contains(image.imageURL)
+        return ImageCellData(url: url, favorite: favorite, width: image.width, height: image.height)
     }
 }

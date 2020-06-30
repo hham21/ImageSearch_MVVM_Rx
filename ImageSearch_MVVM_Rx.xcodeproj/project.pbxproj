@@ -29,6 +29,7 @@
 		3793190A2486584900749580 /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = 379319092486584900749580 /* Router.swift */; };
 		3793190D24865B4100749580 /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3793190C24865B4100749580 /* Constant.swift */; };
 		37A5BD5D248A3675005EEB76 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 37A5BD5C248A3675005EEB76 /* README.md */; };
+		37D963B624AB41FB00C3D032 /* BaseCollectionViewLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37D963B524AB41FB00C3D032 /* BaseCollectionViewLayout.swift */; };
 		6A6685FB537DA1EE689BA0C9 /* Pods_ImageSearch_MVVM_Rx.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 62E15F4945E4939782238D68 /* Pods_ImageSearch_MVVM_Rx.framework */; };
 /* End PBXBuildFile section */
 
@@ -58,6 +59,7 @@
 		379319092486584900749580 /* Router.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
 		3793190C24865B4100749580 /* Constant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constant.swift; sourceTree = "<group>"; };
 		37A5BD5C248A3675005EEB76 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		37D963B524AB41FB00C3D032 /* BaseCollectionViewLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseCollectionViewLayout.swift; sourceTree = "<group>"; };
 		62E15F4945E4939782238D68 /* Pods_ImageSearch_MVVM_Rx.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ImageSearch_MVVM_Rx.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DEA44CB7E60B1B518CD52887 /* Pods-ImageSearch_MVVM_Rx.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ImageSearch_MVVM_Rx.release.xcconfig"; path = "Target Support Files/Pods-ImageSearch_MVVM_Rx/Pods-ImageSearch_MVVM_Rx.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -95,6 +97,7 @@
 			children = (
 				37684D3624869C3100EEC982 /* MainViewController.swift */,
 				376EA9D624888CB900CE75B3 /* BaseCollectionViewController.swift */,
+				37D963B524AB41FB00C3D032 /* BaseCollectionViewLayout.swift */,
 				37684D3824869C4400EEC982 /* SearchViewController.swift */,
 				37684D3A24869C4F00EEC982 /* FavoriteViewController.swift */,
 				3768028424873C040034E07F /* ImageCell.swift */,
@@ -315,6 +318,7 @@
 				3793190D24865B4100749580 /* Constant.swift in Sources */,
 				379319042486525000749580 /* SearchResponse.swift in Sources */,
 				376EA9D724888CB900CE75B3 /* BaseCollectionViewController.swift in Sources */,
+				37D963B624AB41FB00C3D032 /* BaseCollectionViewLayout.swift in Sources */,
 				379318EB24864D1400749580 /* AppDelegate.swift in Sources */,
 				37684D3924869C4400EEC982 /* SearchViewController.swift in Sources */,
 				37684D3B24869C4F00EEC982 /* FavoriteViewController.swift in Sources */,

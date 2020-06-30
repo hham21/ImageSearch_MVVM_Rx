@@ -31,7 +31,7 @@ struct FavoriteModel {
     }
     
     private func toImageCellData(_ image: LocalImage) -> ImageCellData? {
-        guard let url = URL(string: image.imageURL) else { return nil }
-        return ImageCellData(url: url, favorite: image.favorite)
+        guard let url: URL = URL(string: image.imageURL) else { return nil }
+        return ImageCellData(url: url, favorite: image.favorite, width: image.width, height: image.height)
     }
 }

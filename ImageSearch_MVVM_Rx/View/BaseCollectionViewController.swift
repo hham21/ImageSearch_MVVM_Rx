@@ -21,17 +21,9 @@ class BaseCollectionViewController: UIViewController {
     
     var disposeBag: DisposeBag = .init()
     
-    let flowLayout: UICollectionViewFlowLayout = .init()
+    let flowLayout: BaseCollectionViewLayout = .init()
     lazy var collectionView: UICollectionView = .init(frame: view.bounds, collectionViewLayout: flowLayout)
     lazy var dataSource: DataSource = createDataSource()
-    
-    private func createDataSource() -> DataSource {
-        return .init(configureCell: { _, cv, indexPath, item -> UICollectionViewCell in
-            let cell = cv.dequeueReusableCell(withReuseIdentifier: ImageCell.identifier, for: indexPath) as! ImageCell
-            cell.configure(with: item)
-            return cell
-        })
-    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -41,9 +33,7 @@ class BaseCollectionViewController: UIViewController {
     
     private func setAttributes() {
         flowLayout.do {
-            $0.scrollDirection = .vertical
-            $0.minimumLineSpacing = Constant.minSpacing
-            $0.minimumInteritemSpacing = Constant.minSpacing
+            $0.delegate = self
         }
         
         collectionView.do {
@@ -59,6 +49,14 @@ class BaseCollectionViewController: UIViewController {
             $0.edges.equalToSuperview()
         }
     }
+    
+    private func createDataSource() -> DataSource {
+        .init(configureCell: { _, cv, indexPath, item -> UICollectionViewCell in
+            let cell = cv.dequeueReusableCell(withReuseIdentifier: ImageCell.identifier, for: indexPath) as! ImageCell
+            cell.configure(with: item)
+            return cell
+        })
+    }
 }
 
 // MARK: - UICollectionViewDelegateFlowLayout
@@ -68,5 +66,14 @@ extension BaseCollectionViewController: UICollectionViewDelegateFlowLayout {
         let spacing: CGFloat = Constant.minSpacing * Constant.numberOfSpace
         let width: CGFloat = (collectionView.bounds.width - spacing) / Constant.numberOfCells
         return CGSize(width: width, height: width)
+    }
+}
+
+extension BaseCollectionViewController: BaseCollectionViewLayoutDelegate {
+    func collectionView(_ collectionView: UICollectionView, heightForIndexPath indexPath: IndexPath) -> CGFloat {
+        let spacing: CGFloat = Constant.minSpacing * Constant.numberOfSpace
+        let width: CGFloat = (collectionView.bounds.width - spacing) / Constant.numberOfCells
+        let ratio: CGFloat = CGFloat(dataSource[indexPath].height) / CGFloat(dataSource[indexPath].width)
+        return CGFloat(ratio) * width
     }
 }

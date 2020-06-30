@@ -11,6 +11,8 @@ import RxDataSources
 struct ImageCellData {
     var url: URL
     var favorite: Bool
+    var width: Int
+    var height: Int
 }
 
 extension ImageCellData: Equatable, IdentifiableType {
